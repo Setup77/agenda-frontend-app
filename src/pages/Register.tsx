@@ -133,11 +133,14 @@ function Register() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_URL}/auth/register`, { // ✅ Dynamized
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
+
+      const response = await fetch(`${API_URL}/auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(form),
+        credentials: 'include' // 👈 INDISPENSABLE ici aussi
       });
 
 
