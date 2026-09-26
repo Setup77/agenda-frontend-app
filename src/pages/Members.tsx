@@ -30,7 +30,7 @@ function Members() {
       setError("")
 
       try {
-        // ✅ Dynamized endpoint url
+        // ✅ Url dynamique
         const res = await fetch(`${API_URL}/users`)
         const data = await res.json()
 
